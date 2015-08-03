@@ -110,11 +110,11 @@ console.log(testBooleanLogic([false, false, false])); // =>  false
 // Problem 10
 function getUniqueValues(array){
   var unique=[];
-  for(var i=0;i<array.length;i++){
-    if(!contains(unique,array[i])){
-      unique.push(array[i]);
+  array.forEach(function(current){
+    if(!contains(unique,current)){
+      unique.push(current);
     }
-  }
+  });
   return unique;
 }
 console.log('Problem 10');
